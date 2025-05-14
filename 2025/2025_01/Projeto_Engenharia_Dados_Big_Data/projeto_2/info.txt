@@ -1,0 +1,15 @@
+# VERIFICAR CONTAINERS ATIVOS
+docker-compose ps -a 
+ou 
+docker ps -a 
+
+# SUBIR UM DOCKER VIA DOCKER-COMPOSE 
+docker-compose up -d 
+
+# DESATIVAR UM CONTEINER 
+docker-compose down
+
+# PARAR E REMOVER UM CONTEINER 
+docker stop <id_do_conteiner>
+
+docker rm <id_do_conteiner>
