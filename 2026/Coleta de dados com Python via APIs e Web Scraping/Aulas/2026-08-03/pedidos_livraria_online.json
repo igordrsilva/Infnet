@@ -1,0 +1,85 @@
+[
+  {
+    "id_livro": 301,
+    "titulo": "O Enigma de Copérnico",
+    "autor": "Helena Duprat",
+    "categoria": "Ficção Científica",
+    "preco": "42,90",
+    "avaliacoes": [
+      {
+        "cliente": "Bruno Alencar",
+        "nota": 5,
+        "comentario": "Ritmo excelente, não larguei até o final."
+      },
+      {
+        "cliente": "Patrícia Lemos",
+        "nota": 4,
+        "comentario": "Ótimo, mas o meio ficou um pouco arrastado."
+      }
+    ]
+  },
+  {
+    "id_livro": 302,
+    "titulo": "Receitas da Vovó Amália",
+    "autor": "Amália Ferreira",
+    "categoria": "Culinária",
+    "preco": "58,00",
+    "avaliacoes": [
+      {
+        "cliente": "Diego Sales",
+        "nota": 5,
+        "comentario": "As receitas de doces são infalíveis."
+      }
+    ]
+  },
+  {
+    "id_livro": 303,
+    "titulo": "Introdução à Estatística Aplicada",
+    "autor": "Roberto Kanashiro",
+    "categoria": "Educação",
+    "preco": "89,90",
+    "avaliacoes": [{
+        "cliente": "Fábio Cunha",
+        "nota": 5,
+        "comentario": "Excelente livro. Direto ao ponto e didático."
+      }]
+  },
+  {
+    "id_livro": 304,
+    "titulo": "Sombras do Pantanal",
+    "autor": "Vitória Nogueira",
+    "categoria": "Romance",
+    "preco": "35,50",
+    "avaliacoes": [
+      {
+        "cliente": "Fábio Cunha",
+        "nota": 3,
+        "comentario": "Comecei animado, mas o final me decepcionou."
+      },
+      {
+        "cliente": "Letícia Prado",
+        "nota": 5,
+        "comentario": "Descrições maravilhosas do bioma pantaneiro."
+      },
+      {
+        "cliente": "André Siqueira",
+        "nota": 4,
+        "comentario": "Bom livro para quem gosta de romances regionais."
+      }
+    ]
+  },
+  {
+    "id_livro": 305,
+    "titulo": "Guia Prático de Jardinagem Urbana",
+    "autor": "Simone Bezerra",
+    "categoria": "Hobbies",
+    "preco": "29,90",
+    "avaliacoes": [
+      {
+        "cliente": "Otávio Ramalho",
+        "nota": 4,
+        "comentario": "Direto ao ponto, ótimo para apartamento pequeno."
+      }
+    ]
+  }
+]

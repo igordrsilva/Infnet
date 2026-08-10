@@ -1,0 +1,133 @@
+[
+  {
+    "id_cliente": 101,
+    "nome": "Fernanda Albuquerque",
+    "cidade": "Belo Horizonte",
+    "endereco": {
+      "rua": "Rua das Acácias",
+      "numero": 245,
+      "cep": "30130-010"
+    },
+    "pedidos": [
+      {
+        "id_pedido": 5001,
+        "data": "22/07/2026",
+        "valor_total": "45,90",
+        "itens": [
+          "Pizza Margherita",
+          "Refrigerante 350ml"
+        ]
+      },
+      {
+        "id_pedido": 5008,
+        "data": "25/07/2026",
+        "valor_total": "78,50",
+        "itens": [
+          "Combo Executivo",
+          "Suco Natural"
+        ]
+      }
+    ]
+  },
+  {
+    "id_cliente": 102,
+    "nome": "Ricardo Nascimento",
+    "cidade": "Curitiba",
+    "endereco": {
+      "rua": "Avenida das Araucárias",
+      "numero": 1120,
+      "cep": "80620-100"
+    },
+    "pedidos": [
+      {
+        "id_pedido": 5002,
+        "data": "22/07/2026",
+        "valor_total": "32,00",
+        "itens": [
+          "Hambúrguer Artesanal",
+          "Batata Frita"
+        ]
+      }
+    ]
+  },
+  {
+    "id_cliente": 103,
+    "nome": "Juliana Cavalcanti",
+    "cidade": "Recife",
+    "endereco": {
+      "rua": "Rua do Sol Nascente",
+      "numero": 88,
+      "cep": "50030-230"
+    },
+    "pedidos": [
+      {
+        "id_pedido": 5003,
+        "data": "23/07/2026",
+        "valor_total": "120,40",
+        "itens": [
+          "Sushi Combinado 20 peças",
+          "Temaki de Salmão",
+          "Refrigerante Lata"
+        ]
+      },
+      {
+        "id_pedido": 5010,
+        "data": "26/07/2026",
+        "valor_total": "58,90",
+        "itens": [
+          "Yakisoba de Frango"
+        ]
+      }
+    ]
+  },
+  {
+    "id_cliente": 104,
+    "nome": "Camila Rezende",
+    "cidade": "Porto Alegre",
+    "endereco": {
+      "rua": "Rua dos Andradas",
+      "numero": 970,
+      "cep": "90020-004"
+    },
+    "pedidos": [
+      {
+        "id_pedido": 5004,
+        "data": "24/07/2026",
+        "valor_total": "63,20",
+        "itens": [
+          "Marmita Fitness",
+          "Água de Coco"
+        ]
+      }
+    ]
+  },
+  {
+    "id_cliente": 105,
+    "nome": "Thiago Monteiro",
+    "cidade": "Salvador",
+    "endereco": {
+      "rua": "Rua da Vitória",
+      "numero": 33,
+      "cep": "40060-070"
+    },
+    "pedidos": [
+      {
+        "id_pedido": 5005,
+        "data": "24/07/2026",
+        "valor_total": "89,00",
+        "itens": [
+          "Moqueca de Camarão",
+          "Arroz de Coco"
+        ]
+      },
+      {
+        "id_pedido": 5009,
+        "data": "26/07/2026",
+        "valor_total": "27,50",
+        "itens": [
+          "Acarajé"
+        ]
+      }
+    ]
+  }
+]
