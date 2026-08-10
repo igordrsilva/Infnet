@@ -1,6 +1,8 @@
 # Teste de performance 1
 #### Desenvolvimento Front-End com Python (com Streamlit)
 
+Acesse aqui o [readme.txt](https://github.com/igordrsilva/Infnet/blob/main/2026/Fron-End%20com%20Streamlit/tp1/readme.txt)
+
 ## Preparar ambiente para desenvolvimento local de Streamlit com Python
 #### Exercício 1: Motivação para usar Streamlit
 Descreva, em um texto de 200 palavras, a motivação para usar a biblioteca Streamlit no contexto da Ciência de Dados. Inclua exemplos de casos de uso onde Streamlit pode ser vantajoso.
