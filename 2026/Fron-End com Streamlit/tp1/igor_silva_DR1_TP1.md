@@ -42,7 +42,7 @@ Crie um ambiente virtual utilizando virtualenv ou pipenv, e instale as dependên
 6. Criação do arquive requirements:  `pip freeze > requirements.txt`
 7. Desativar o ambiente virtual:  `deactivate`
 
-![Exercício 3: Preparar ambiente de desenvolvimento](https://github.com/igordrsilva/Infnet/blob/main/2026/Fron-End%20com%20Streamlit/tp1/files/ex3.png)
+![Exercício 3: Preparar ambiente de desenvolvimento](tp1/files/ex3.png)
 
 #### Exercício 4: Instalação do Streamlit
 Utilizando o ambiente virtual criado no exercício anterior, instale a biblioteca Streamlit usando pip. Em seguida, crie um pequeno script em Python que exiba a mensagem "Hello, Streamlit!" utilizando a função st.write(). Documente cada etapa do processo.
@@ -62,7 +62,7 @@ Para rodar:
 3. Ativar o ambiente virtual:  `source .venv/bin/activate`
 4. Rodar:  `streamlit run app.py`
 
-![Exercício 4: Instalação do Streamlit](https://github.com/igordrsilva/Infnet/blob/main/2026/Fron-End%20com%20Streamlit/tp1/files/ex4.png)
+![Exercício 4: Instalação do Streamlit](tp1/files/ex4.png)
 
 ## Criação de uma Aplicação Streamlit com os Dados
 A partir deste ponto, você criará uma única aplicação Streamlit utilizando a base de dados "Most Streamed Spotify Songs 2024". Cada exercício deve ser uma adição incremental à sua aplicação.
@@ -84,7 +84,7 @@ st.markdown("Aqui vai um texto [link](https://www.google.com/?hl=pt_BR)! (markdo
 st.markdown("Aqui vai um texto em **negrito**! (markdown)")
 ```
 
-![Exercício 5: Títulos e textos formatados](https://github.com/igordrsilva/Infnet/blob/main/2026/Fron-End%20com%20Streamlit/tp1/files/ex5.png)
+![Exercício 5: Títulos e textos formatados](tp1/files/ex5.png)
 
 #### Exercício 6: Exibir DataFrame com pandas
 Carregue o dataset "Most Streamed Spotify Songs 2024" utilizando a biblioteca pandas. Exiba o DataFrame completo em sua aplicação Streamlit usando as funções st.dataframe() e st.table(). Documente as diferenças entre as duas funções. Inclua printscreens desta etapa.
@@ -108,7 +108,7 @@ st.write("Exibindo o DataFrame completo usando st.dataframe():")
 st.dataframe(df)
 ```
 
-![Exercício 6: Exibir DataFrame com pandas](https://github.com/igordrsilva/Infnet/blob/main/2026/Fron-End%20com%20Streamlit/tp1/files/ex6.png)
+![Exercício 6: Exibir DataFrame com pandas](tp1/files/ex6.png)
 
 #### Exercício 7: Exibir métricas
 Selecione três músicas do dataset e adicione à sua aplicação Streamlit a exibição do nome da música, o artista e o número de streams utilizando a função st.metric(). Explique como esta função pode ser útil em dashboards de dados. Inclua printscreens desta etapa.
@@ -138,7 +138,7 @@ if not df.empty:
 
 A função `st.metric()` é indicada para dashboards, pois foi projetada pra exibir e destacar valores de KPIs e indicadores, além de ter o parâmetro delta, que possibilita a comparação entre valores.
 
-![Exercício 7: Exibir métricas](https://github.com/igordrsilva/Infnet/blob/main/2026/Fron-End%20com%20Streamlit/tp1/files/ex7.png)
+![Exercício 7: Exibir métricas](tp1/files/ex7.png)
 
 #### Exercício 8: Utilizar a função write()
 Na sua aplicação Streamlit, utilize a função st.write() para exibir um DataFrame, um texto markdown e uma lista. Demonstre a versatilidade da função st.write() ao lidar com diferentes tipos de dados. Inclua printscreens desta etapa.
@@ -177,7 +177,7 @@ st.write('''
 7. Desativar o ambiente virtual:  `deactivate`''')
 ```
 
-![Exercício 8: Utilizar a função write()](https://github.com/igordrsilva/Infnet/blob/main/2026/Fron-End%20com%20Streamlit/tp1/files/ex8.png)
+![Exercício 8: Utilizar a função write()](tp1/files/ex8.png)
 
 #### Exercício 9: Comandos Magic
 Utilize comandos Magic para apresentar conteúdo na sua aplicação Streamlit. Crie um script que exiba um título, uma lista e um DataFrame apenas escrevendo diretamente no script sem usar funções explícitas do Streamlit. Inclua printscreens desta etapa.
@@ -205,7 +205,7 @@ ax.hist(arr, bins=20)
 fig
 ```
 
-![Exercício 9: Comandos Magic](https://github.com/igordrsilva/Infnet/blob/main/2026/Fron-End%20com%20Streamlit/tp1/files/ex09.png)
+![Exercício 9: Comandos Magic](tp1/files/ex09.png)
 
 #### Exercício 10: Incorporar multimídia
 Adicione à sua aplicação Streamlit a exibição de uma imagem, um vídeo e um áudio. Utilize as funções st.image(), st.video() e st.audio() para incorporar esses elementos multimídia na sua aplicação. Inclua printscreens desta etapa.
@@ -222,7 +222,7 @@ st.write('Áudio')
 st.audio("https://samplelib.com/mp3/sample-3s.mp3")
 ```
 
-![Exercício 10: Incorporar multimídia](https://github.com/igordrsilva/Infnet/blob/main/2026/Fron-End%20com%20Streamlit/tp1/files/ex10.png)
+![Exercício 10: Incorporar multimídia](tp1/files/ex10.png)
 
 #### Exercício 11: Utilizar animações e emojis
 Adicione uma animação (GIF) e alguns emojis na sua aplicação Streamlit. Utilize as funções apropriadas para garantir que esses elementos sejam exibidos corretamente. Inclua printscreens desta etapa.
@@ -241,9 +241,9 @@ st.set_page_config(
 )
 ```
 
-![Exercício 11-1: Utilizar animações e emojis](https://github.com/igordrsilva/Infnet/blob/main/2026/Fron-End%20com%20Streamlit/tp1/files/ex11-1.png)
-![Exercício 11-2: Utilizar animações e emojis](https://github.com/igordrsilva/Infnet/blob/main/2026/Fron-End%20com%20Streamlit/tp1/files/ex11-2.png)
-![Exercício 11-3: Utilizar animações e emojis](https://github.com/igordrsilva/Infnet/blob/main/2026/Fron-End%20com%20Streamlit/tp1/files/ex11-3.png)
+![Exercício 11-1: Utilizar animações e emojis](tp1/files/ex11-1.png)
+![Exercício 11-2: Utilizar animações e emojis](tp1/files/ex11-2.png)
+![Exercício 11-3: Utilizar animações e emojis](tp1/files/ex11-3.png)
 
 #### Exercício 12: Combinar elementos em uma aplicação
 Finalize sua aplicação Streamlit combinando todos os elementos textuais aprendidos (título, cabeçalho, subcabeçalho, texto formatado, DataFrame, métricas, multimídia e comandos Magic). Utilize o dataset "Most Streamed Spotify Songs 2024" para alimentar os dados da aplicação. A aplicação deve ser informativa e visualmente atraente. Inclua printscreens desta etapa.
@@ -287,5 +287,5 @@ df[df['Artist'] == artista_popular]['Track'].count(), 'música(s)'
 df[df['Artist'] == artista_popular]['Spotify Streams'].str.replace(',', '').astype(int).sum(), 'plays'
 ```
 
-![Exercício 12-1: Combinar elementos em uma aplicação](https://github.com/igordrsilva/Infnet/blob/main/2026/Fron-End%20com%20Streamlit/tp1/files/ex12-1.png)
-![Exercício 12-2: Combinar elementos em uma aplicação](https://github.com/igordrsilva/Infnet/blob/main/2026/Fron-End%20com%20Streamlit/tp1/files/ex12-2.png)
+![Exercício 12-1: Combinar elementos em uma aplicação](tp1/files/ex12-1.png)
+![Exercício 12-2: Combinar elementos em uma aplicação](tp1/files/ex12-2.png)
