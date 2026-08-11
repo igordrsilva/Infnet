@@ -205,7 +205,7 @@ ax.hist(arr, bins=20)
 fig
 ```
 
-![Exercício 9: Comandos Magic](https://github.com/igordrsilva/Infnet/blob/main/2026/Fron-End%20com%20Streamlit/tp1/files/ex9.png)
+![Exercício 9: Comandos Magic](https://github.com/igordrsilva/Infnet/blob/main/2026/Fron-End%20com%20Streamlit/tp1/files/ex09.png)
 
 #### Exercício 10: Incorporar multimídia
 Adicione à sua aplicação Streamlit a exibição de uma imagem, um vídeo e um áudio. Utilize as funções st.image(), st.video() e st.audio() para incorporar esses elementos multimídia na sua aplicação. Inclua printscreens desta etapa.
@@ -288,5 +288,4 @@ df[df['Artist'] == artista_popular]['Spotify Streams'].str.replace(',', '').asty
 ```
 
 ![Exercício 12-1: Combinar elementos em uma aplicação](https://github.com/igordrsilva/Infnet/blob/main/2026/Fron-End%20com%20Streamlit/tp1/files/ex12-1.png)
-
 ![Exercício 12-2: Combinar elementos em uma aplicação](https://github.com/igordrsilva/Infnet/blob/main/2026/Fron-End%20com%20Streamlit/tp1/files/ex12-2.png)
