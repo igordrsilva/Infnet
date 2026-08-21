@@ -6,6 +6,7 @@ dotenv.load_dotenv()
 
 API_DOLAR = os.getenv('API_DOLAR')
 API_WEATHER = os.getenv('API_WEATHER')
+API_FORMS = os.getenv('API_FORMS')
 
 WEATHER_CODES = {
     0: "Céu limpo",
@@ -35,7 +36,7 @@ def get_dolar_value() -> str:
         response.raise_for_status()
         data = response.json()
         dolar_value = data["USDBRL"]["ask"]
-        return dolar_value
+        return float(dolar_value)
     except Exception as e:
         return f"An error happened: {e}"
 
@@ -55,5 +56,16 @@ def get_weather(latitude:str, longitude:str) -> dict|str:
 
 
 # 3. Enviar dados para Google Forms
-def send_data_to_forms():
-    pass
+def send_data_to_forms(dolar_value:float, temperature:str, weather:str) -> None | str:
+    try:
+        payload = {
+            "entry.1140698660":dolar_value,
+            "entry.806067232":temperature,
+            "entry.1190936322":weather
+        }
+        response = requests.post(API_FORMS, data=payload)
+        response.raise_for_status()
+        data = response.json()
+        print(data)
+    except Exception as e:
+        return f'An error happened: {e}'
