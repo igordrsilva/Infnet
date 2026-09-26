@@ -100,7 +100,6 @@ def extract_players_info(matches_df: pd.DataFrame) -> pd.DataFrame:
         players = pd.concat(players_list, ignore_index=True)
         players.to_csv(path, index=False)
 
-    final_columns = ["player_id", "player_name", "player_nickname", "jersey_number", "country", "team_name", "season"]
-    final_players_df = players[final_columns].drop_duplicates()
+    final_players_df = players
 
     return final_players_df
