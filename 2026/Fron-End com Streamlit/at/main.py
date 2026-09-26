@@ -40,9 +40,9 @@ if "current_page" not in st.session_state:
 # =======================================
 # NAVEGAÇÃO
 # =======================================
-page_match = st.Page('./pages/match.py', title='Partidas')
-page_team = st.Page('./pages/team.py', title='Equipes')
-page_player = st.Page('./pages/player.py', title='Jogadores')
+page_match = st.Page('./pages/match.py', title='Partidas', icon="🏟️")
+page_team = st.Page('./pages/team.py', title='Equipes', icon="⚽️")
+page_player = st.Page('./pages/player.py', title='Jogadores', icon="🧍🏽")
 pg = st.navigation([page_match, page_team, page_player])
 
 
