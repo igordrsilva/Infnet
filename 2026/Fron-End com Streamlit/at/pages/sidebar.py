@@ -18,39 +18,14 @@ def sidebar(competitions_df:pd.DataFrame, matches_df: pd.DataFrame, players_df: 
     # -------- Edição
     season = st.sidebar.selectbox("Edição", sorted(filtred_competition_df["season_name"].dropna().unique()))
 
-    # -------- Partidas
+    # -------- Equipes
     filtred_matches_df = matches_df[
         (matches_df["competition"] == competition) &
         (matches_df["season"] == season)
     ]
 
-    if not filtred_matches_df.empty:
-        match_options = (
-            filtred_matches_df["home_team"] + " x " + filtred_matches_df["away_team"]
-        ).unique()
-        
-        match = st.sidebar.selectbox(
-            "Partida", sorted(match_options)
-        )
-    else:
-        match = None
-
-    # -------- Jogador
-    filtred_players_df = players_df[
-        (players_df["season"] == season)
-    ]
-
-    if not filtred_players_df.empty:
-        players = sorted(
-            filtred_players_df["player_name"].dropna().unique()
-        )
-
-        player = st.sidebar.selectbox(
-            "Jogador", players
-        )
-    
-    else:
-        player = None
+    filtred_matches_df = pd.concat([filtred_matches_df["home_team"], filtred_matches_df["away_team"]])
+    team = st.sidebar.selectbox("Equipe", sorted(filtred_matches_df.dropna().unique()))
 
     # -------- Limpar filtros
     if st.sidebar.button("Limpar filtros"):
@@ -61,6 +36,5 @@ def sidebar(competitions_df:pd.DataFrame, matches_df: pd.DataFrame, players_df: 
     st.session_state["sidebar_filters"] = {
         "competition": competition,
         "season": season,
-        "match": match,
-        "player": player
+        "team": team
     }
