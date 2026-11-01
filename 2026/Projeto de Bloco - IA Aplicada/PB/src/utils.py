@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-def find_column(df:pd.DataFrame, possible_names:list) -> str | None:
+def find_column(df: pd.DataFrame, possible_names: list) -> str | None:
     """
     Procura uma coluna no DataFrame utilizando uma lista
     de possíveis nomes.
@@ -17,7 +17,7 @@ def find_column(df:pd.DataFrame, possible_names:list) -> str | None:
     return None
 
 
-def convert_to_numeric(series:pd.Series) -> pd.Series:
+def convert_to_numeric(series: pd.Series) -> pd.Series:
     """
     Converte uma Series para valores numéricos.
 
@@ -26,7 +26,4 @@ def convert_to_numeric(series:pd.Series) -> pd.Series:
     como NaN.
     """
 
-    return pd.to_numeric(
-        series,
-        errors="coerce"
-    )
+    return pd.to_numeric(series, errors="coerce")
