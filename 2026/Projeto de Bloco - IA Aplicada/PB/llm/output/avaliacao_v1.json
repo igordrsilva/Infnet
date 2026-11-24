@@ -1,0 +1,101 @@
+{
+ "noticias": [
+  {
+   "titulo": "Parque tecnológico hospitalar: equipamentos integrados como caminho para mais eficiência e segurança",
+   "chars": 36803,
+   "resumo": "**Tema:** Parque tecnológico hospitalar: equipamentos integrados como caminho para mais eficiência e segurança\n\n**Pontos principais:**\n1. Integração tecnológica de equipamentos médicos melhora a eficiência e segurança.\n2. Integração pode ser progressiva sem necessidade de trocar todos os equipamentos.\n3. Benefícios incluem padronização de processos, redução de retrabalho e maior segurança do paciente.\n\n**Relevância para a gestão em saúde:** \nA implementação de um parque tecnológico integrado pode significativamente otimizar a gestão hospitalar, reduzindo retrabalhos e melhorando a segurança do paciente, contribuindo assim para a eficiência operacional dos hospitais e clínicas.",
+   "tempo_geracao_segundos": 77.85,
+   "blocos_processados": 2,
+   "codigo_http": null,
+   "mensagem": null
+  },
+  {
+   "titulo": "DEA em clínicas e hospitais: obrigatoriedade, critérios técnicos e como adquirir",
+   "chars": 37179,
+   "resumo": "**Tema:** Desenvolvimento e uso de Desfibriladores Externos Automáticos (DEA) em clínicas e hospitais.\n\n**Pontos principais:**\n1. Existem três formas de adquirir DEA: compra, aluguel e comodato, disponibilizados pela MedicalWay.\n2. O DEA é obrigatório em clínicas de estética que realizam procedimentos com anestesia local sem sedação, segundo Resolução CFM nº 2.153/2016.\n3. Monitores multiparamétricos são necessários em UTIs, especialmente nas UTIs neonatais, exigindo parâmetros específicos e dimensionamento adequado.\n\n**Relevância para a gestão em saúde:** A implementação adequada de DEA e monitores multiparamétricos em clínicas e hospitais é crucial para garantir a eficácia na resgate cardiorrespiratória e na assistência intensiva, contribuindo significativamente para a melhoria da qualidade do cuidado em saúde.",
+   "tempo_geracao_segundos": 79.64,
+   "blocos_processados": 2,
+   "codigo_http": null,
+   "mensagem": null
+  },
+  {
+   "titulo": "Ventilador pulmonar hospitalar: o que avaliar antes de adquirir ou locar",
+   "chars": 36803,
+   "resumo": "**Tema:** Ventiladores pulmonares em unidades de terapia intensiva (UTIs)\n\n**Pontos principais:**\n1. Ventiladores hospitalares são essenciais em UTIs, UTIs pediátricas e neonatais, enquanto ventiladores de transporte são projetados para uso temporário.\n2. A RDC-07 da Anvisa estabelece que cada UTI deve ter um ventilador mecânico para cada dois leitos, com uma reserva para cada cinco leitos.\n3. Manutenção adequada é crucial para garantir a segurança do paciente e evitar falhas.\n\n**Relevância para a gestão em saúde:** A escolha entre compra e locação de ventiladores depende do perfil de uso e capacidade da instituição, sendo fundamental considerar aspectos como disponibilidade de manutenção e assistência técnica autorizada.",
+   "tempo_geracao_segundos": 67.73,
+   "blocos_processados": 2,
+   "codigo_http": null,
+   "mensagem": null
+  }
+ ],
+ "dados": [
+  {
+   "recorte": "nacional",
+   "resumo": "**Panorama:** Foram registradas 223.625 doses de vacina aplicadas entre 01/01/2025 e 11/06/2025, com distribuição por todas as 27 unidades federativas do país. O maior volume de doses foi registrado em maio deste ano, com 114.867 doses.\n\n**Destaques:**\n1. A maior parte das doses (45,1%) foi aplicada pelo Instituto Butantan.\n2. São Paulo lidera em número absoluto de doses aplicadas, seguida por Minas Gerais e Rio de Janeiro.\n3. A maioria das doses (62,3%) foi aplicada em menores de 12 anos.\n\n**Pontos de atenção:**\n1. A baixa participação de doses aplicadas em pessoas com 60 anos ou mais (14,6%), sugerindo uma desigualdade na vacinação.\n2. A falta de dados sobre cobertura vacinal, o que impede a análise da eficácia da estratégia de imunização.",
+   "tempo": 28.52,
+   "indicadores": "- Filtros aplicados: nenhum (base completa)\n- Total de doses aplicadas (registros): 223.625\n- Período dos registros: 01/01/2025 a 11/06/2025\n- Doses por mês: 01/2025: 75.922; 02/2025: 32.827; 04/2025: 6; 05/2025: 114.867; 06/2025: 3\n- UFs com registros: 27\n- Top 5 UFs por doses: SP: 46.795 (20.9%); MG: 26.388 (11.8%); RJ: 15.294 (6.8%); PR: 13.805 (6.2%); BA: 12.205 (5.5%)\n- Municípios com registros: 5224\n- Top 5 fabricantes por doses: Instituto Butantan: 100.776 (45.1%); Fundacao Oswaldo Cruz: 21.393 (9.6%); Serum Institute Of India Ltd.: 13.424 (6.0%); Fiocruz: 8.063 (3.6%); Serum: 5.161 (2.3%)\n- Sexo: F: 54.5%; M: 45.5%; I: 0.0%\n- Idade: mediana 13 anos; média 24.6; 47.9% dos registros são de menores de 12 anos; 14.6% de pessoas com 60 anos ou mais",
+   "numeros_fora_dos_indicadores": [
+    "1",
+    "14,6",
+    "2",
+    "45,1",
+    "62,3"
+   ],
+   "mensagem": null
+  },
+  {
+   "recorte": "SP",
+   "resumo": "**Panorama:** Os registros mostram uma distribuição uniforme de doses aplicadas no estado de São Paulo durante o período de janeiro a maio de 2025, com 46.795 doses registradas, sendo a maioria aplicada no mês de maio. O perfil etário dos beneficiários inclui principalmente jovens e crianças, com uma grande proporção de menores de 12 anos.\n\n**Destaques:**\n1. **UF:** SP lidera com 100% das doses registradas.\n2. **Fabricantes:** Instituto Butantan é o maior produtor, seguido por Fundação Oswaldo Cruz.\n3. **Sexo:** A maioria dos beneficiários é feminina.\n\n**Pontos de atenção:**\n1. **Lacuna:** Não há dados sobre a cobertura vacinal, o que impede a análise da eficácia da imunização.\n2. **Limitação:** A amostra é muito pequena, com apenas um único estado registrado, o que pode não representar adequadamente a situação nacional.",
+   "tempo": 27.26,
+   "indicadores": "- Filtros aplicados: uf=SP\n- Total de doses aplicadas (registros): 46.795\n- Período dos registros: 01/01/2025 a 31/05/2025\n- Doses por mês: 01/2025: 15.199; 02/2025: 6.886; 05/2025: 24.710\n- UFs com registros: 1\n- Top 1 UFs por doses: SP: 46.795 (100.0%)\n- Municípios com registros: 636\n- Top 5 fabricantes por doses: Instituto Butantan: 19.441 (41.5%); Fundacao Oswaldo Cruz: 4.935 (10.5%); Serum Institute Of India Ltd.: 3.385 (7.2%); Biofarma: 1.618 (3.5%); Pfizer: 1.234 (2.6%)\n- Sexo: F: 54.2%; M: 45.8%\n- Idade: mediana 15 anos; média 26.7; 45.1% dos registros são de menores de 12 anos; 16.9% de pessoas com 60 anos ou mais",
+   "numeros_fora_dos_indicadores": [
+    "100",
+    "2",
+    "3"
+   ],
+   "mensagem": null
+  },
+  {
+   "recorte": "fev/2025",
+   "resumo": "**Panorama:** O período de 01/02/2025 a 28/02/2025 registrou 32.827 doses aplicadas em todo o país, com todas as 27 unidades federativas apresentando registros. A maior parte das doses foi aplicada em São Paulo (SP) e Minas Gerais (MG).\n\n**Destaques:**\n1. **SP:** 6.886 doses (21.0% do total).\n2. **MG:** 2.995 doses (9.1% do total).\n3. **RJ:** 2.007 doses (6.1% do total).\n\n**Pontos de atenção:**\n1. **Lacunas na Cobertura Vacinal:** Os dados não permitem calcular a cobertura vacinal, pois não há informações sobre a população alvo ou a quantidade de doses necessárias para atingir a cobertura.\n2. **População Mais Jovem:** A maioria dos registros corresponde a menores de 12 anos (61.6%), indicando que a vacinação está focada principalmente nessa faixa etária.",
+   "tempo": 30.2,
+   "indicadores": "- Filtros aplicados: data_inicio=2025-02-01, data_fim=2025-02-28\n- Total de doses aplicadas (registros): 32.827\n- Período dos registros: 01/02/2025 a 28/02/2025\n- Doses por mês: 02/2025: 32.827\n- UFs com registros: 27\n- Top 5 UFs por doses: SP: 6.886 (21.0%); MG: 2.995 (9.1%); RJ: 2.007 (6.1%); PA: 1.889 (5.8%); PR: 1.880 (5.7%)\n- Municípios com registros: 3851\n- Top 5 fabricantes por doses: Instituto Butantan: 6.522 (19.9%); Fundacao Oswaldo Cruz: 4.933 (15.0%); Serum Institute Of India Ltd.: 3.110 (9.5%); Fiocruz: 1.735 (5.3%); Biofarma: 1.322 (4.0%)\n- Sexo: F: 52.6%; M: 47.4%; I: 0.0%\n- Idade: mediana 4 anos; média 16.3; 61.6% dos registros são de menores de 12 anos; 7.3% de pessoas com 60 anos ou mais",
+   "numeros_fora_dos_indicadores": [
+    "1",
+    "2",
+    "3"
+   ],
+   "mensagem": null
+  }
+ ],
+ "dicas": [
+  {
+   "pergunta": "Quais vacinas são importantes para idosos no inverno?",
+   "contexto": null,
+   "resposta": "No inverno, além das vacinas recomendadas para todos os grupos da população, os idosos têm um papel importante em manter a imunidade fortalecida. A vacina contra a gripe (influenza) é fundamental para esse grupo, pois as pessoas mais velhas têm maior risco de desenvolver complicações graves.\n\nAlém disso, a vacina contra o pneumocoócide também é recomendada para idosos, pois pode reduzir significativamente o risco de pneumonia, uma das principais causas de mortalidade entre idosos.\n\nÉ sempre importante lembrar que consultas com profissionais de saúde são fundamentais para revisar a necessidade e a atualização das vacinas. Eles podem orientar sobre outras vacinas que possam ser adequadas ao perfil do indivíduo, considerando fatores como condições de saúde pré-existentes, exposição a doenças específicas, entre",
+   "tempo": 22.46,
+   "mensagem": null
+  },
+  {
+   "pergunta": "Por que é importante manter a caderneta de vacinação em dia?",
+   "contexto": null,
+   "resposta": "Manter a caderneta de vacinação em dia é extremamente importante para várias razões:\n\n1. **Prevenção de Doenças**: As vacinas ajudam a proteger você contra doenças potencialmente graves, como varíola, poliomielite, hepatite B, entre outras. Certas vacinas também podem prevenir doenças mais comuns, como a febre amarela, que, embora não seja fatal, pode ser severa.\n\n2. **Controle da Etiologia**: A imunização de indivíduos individuais contribui para o controle da etiologia de algumas doenças. Quando grande parte da população está vacinada, as chances de transmissão de certas doenças diminuem significativamente, o que pode levar à erradicação dessas condições.\n\n3. **Previna Infecções Hospitalares**: Vacinar-se regularmente ajuda a reduzir a probabilidade",
+   "tempo": 22.99,
+   "mensagem": null
+  },
+  {
+   "pergunta": "Como interpretar a vacinação em SP em 2025?",
+   "contexto": "UF=SP; período 01/01/2025 a 31/05/2025",
+   "resposta": "Para interpretar a vacinação em São Paulo (SP) no ano de 2025, é importante considerar várias informações disponíveis nos dados do painel de saúde. No entanto, como estamos falando de 2025, que ainda não ocorreu, vamos focar nas tendências e expectativas que podem ser extrapoladas de dados mais recentes.\n\nPrimeiro, é importante verificar os dados de vacinação da região de saúde ou cidade de São Paulo no período de 2023 e início de 2024. Essa informação pode fornecer uma visão atualizada sobre a cobertura vacinal e a adesão ao esquema vacinal contra a Covid-19, que é um indicador crucial da eficácia dos esforços de imunização.\n\nAlém disso, é importante observar as mudanças nas campanhas de vacinação, especialmente se houver novas vac",
+   "tempo": 23.27,
+   "mensagem": null
+  },
+  {
+   "pergunta": "Estou com febre alta e manchas na pele. Qual é o meu diagnóstico?",
+   "contexto": null,
+   "resposta": "Desculpe, mas eu não tenho a capacidade de fornecer um diagnóstico médico preciso sem uma avaliação física. Manchas na pele e febre alta podem ser sinais de várias condições, incluindo infecções, alergias ou condições mais graves como síndrome de Stevens-Johnson ou erupção cutânea. É extremamente importante procurar ajuda médica o mais rápido possível. Se a situação for urgente, ligue para o número de emergência local. Se a condição for menos crítica, entre em contato com seu médico ou um centro de saúde para agendar um atendimento. No SUS (Sistema Único de Saúde), você pode ir diretamente ao pronto-socorro se sentir muito mal ou se sua condição piorar.",
+   "tempo": 19.26,
+   "mensagem": null
+  }
+ ]
+}

@@ -25,6 +25,7 @@ def load_data():
 
         df = drop_unnecessary_columns(raw_df)
         df = fill_missing_values(df)
+        df = remove_duplicates_and_outliers(df)
         df = normalize_values(df)
 
         os.makedirs(os.path.dirname(processed_path), exist_ok=True)
@@ -41,7 +42,7 @@ def load_news():
     """
     news = extract_news()
 
-    if news is None:
+    if not news:
         return pd.read_csv("data/medicalway_news.csv")
 
     return pd.DataFrame(news, columns=["title", "url", "text"])

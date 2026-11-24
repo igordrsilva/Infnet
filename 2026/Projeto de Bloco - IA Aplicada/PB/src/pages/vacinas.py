@@ -2,6 +2,8 @@ import pandas as pd
 import streamlit as st
 
 from src.data_loader import load_data
+from src.insights import build_data_context, build_highlights
+from src.llm_client import LLMError, resumir_dados
 from src.utils import find_column
 
 # ============================================================
@@ -349,3 +351,51 @@ with col2:
 
 
 st.divider()
+
+
+# ============================================================
+# RESUMO EXECUTIVO COM IA
+# ============================================================
+
+st.subheader("Resumo executivo com IA")
+st.caption(
+    "Os números e rótulos do resumo são calculados em Python, sem IA. "
+    "A LLM local escreve apenas o parágrafo de interpretação, sem citar números."
+)
+
+if st.button("Gerar resumo dos dados filtrados"):
+    partes = []
+    if filtros["periodo"]:
+        ini, fim = filtros["periodo"]
+        partes.append(f"período {ini:%d/%m/%Y} a {fim:%d/%m/%Y}")
+    if filtros["ufs"]:
+        partes.append("UF " + ", ".join(filtros["ufs"]))
+    if filtros["municipios"]:
+        partes.append(f"{len(filtros['municipios'])} município(s)")
+    if filtros["vacinas"]:
+        partes.append("vacinas " + ", ".join(filtros["vacinas"][:5]))
+
+    filtros_txt = "; ".join(partes)
+    indicadores = build_data_context(filtered_df, filtros_txt)
+    destaques = build_highlights(filtered_df, filtros_txt)
+
+    with st.spinner("Gerando resumo com a LLM local..."):
+        try:
+            st.session_state.resumo_dados = {
+                **resumir_dados(destaques, indicadores),
+                "indicadores": indicadores,
+            }
+        except LLMError as e:
+            st.session_state.pop("resumo_dados", None)
+            st.error(str(e))
+
+resultado_ia = st.session_state.get("resumo_dados")
+if resultado_ia:
+    st.info(resultado_ia["resumo"])
+    if not resultado_ia.get("interpretacao"):
+        st.caption("A IA não gerou interpretação válida desta vez; exibindo só os destaques calculados.")
+    st.caption(
+        f"Interpretação gerada por {resultado_ia['modelo']} em {resultado_ia['tempo_geracao_segundos']} s."
+    )
+    with st.expander("Indicadores detalhados"):
+        st.code(resultado_ia["indicadores"])

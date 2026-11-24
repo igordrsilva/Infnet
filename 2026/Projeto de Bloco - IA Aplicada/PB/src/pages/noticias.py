@@ -24,4 +24,5 @@ else:
             text=noticia["text"],
             url=noticia["url"],
             container=col,
+            key=str(i),
         )

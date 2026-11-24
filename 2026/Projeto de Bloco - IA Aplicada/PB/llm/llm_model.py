@@ -6,6 +6,8 @@ from huggingface_hub import snapshot_download
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
+from llm import summarizer
+
 # Garante o caminho absoluto correto independente de onde o terminal for executado
 BASE_DIR = Path(__file__).resolve().parent.parent
 MODEL_ID = "Qwen/Qwen2.5-3B-Instruct"
@@ -77,29 +79,17 @@ class HealthLLMService:
             self.model = None
             raise RuntimeError(f"Falha crítica ao carregar os pesos da LLM na memória: {str(e)}") from e
 
-    def generate_health_tip(
+    def _chat(
         self,
-        user_input: str,
-        context: str = "",
-        max_new_tokens: int = 200,
-        timeout_segundos: float = 45.0
-    ) -> tuple[str, float]:
-        """Gera dicas de saúde e retorna (texto_gerado, tempo_em_segundos)."""
+        system_prompt: str,
+        user_content: str,
+        max_new_tokens: int,
+        temperature: float,
+        timeout_segundos: float,
+    ) -> str:
+        """Executa uma geração com system + user e devolve apenas o texto novo."""
         if not self.is_ready():
             raise RuntimeError("O modelo LLM não está carregado na memória.")
-
-        inicio = time.perf_counter()
-
-        system_prompt = (
-            "Você é um assistente virtual especialista em saúde pública e bem-estar no Brasil. "
-            "Forneça dicas de saúde claras, acolhedoras, objetivas e baseadas em evidências para os visitantes "
-            "de um painel de indicadores de saúde. Sempre lembre o usuário de que suas dicas são "
-            "informativas e não substituem uma consulta médica ou atendimento no SUS."
-        )
-
-        user_content = user_input.strip()
-        if context and context.strip():
-            user_content = f"Contexto do painel de saúde: {context.strip()}\nPergunta do visitante: {user_content}"
 
         if getattr(self.tokenizer, "chat_template", None):
             messages = [
@@ -136,15 +126,13 @@ class HealthLLMService:
                 attention_mask=model_inputs["attention_mask"],
                 max_new_tokens=max_new_tokens,
                 max_time=timeout_segundos,
-                temperature=0.6,
+                temperature=temperature,
                 top_p=0.9,
                 do_sample=True,
                 pad_token_id=pad_id,
                 eos_token_id=self.tokenizer.eos_token_id,
                 use_cache=True
             )
-
-        tempo_decorrido = round(time.perf_counter() - inicio, 2)
 
         input_length = model_inputs["input_ids"].shape[1]
         new_tokens = generated_ids[0][input_length:]
@@ -153,7 +141,121 @@ class HealthLLMService:
         if not response:
             raise RuntimeError("O modelo concluiu a execução, mas não retornou texto válido.")
 
-        return response, tempo_decorrido
+        return response
+
+    def generate_health_tip(
+        self,
+        user_input: str,
+        context: str = "",
+        max_new_tokens: int = 200,
+        timeout_segundos: float = 45.0
+    ) -> tuple[str, float]:
+        """Gera dicas de saúde e retorna (texto_gerado, tempo_em_segundos)."""
+        inicio = time.perf_counter()
+
+        system_prompt = (
+            "Você é um assistente virtual especialista em saúde pública e bem-estar no Brasil. "
+            "Forneça dicas de saúde claras, acolhedoras, objetivas e baseadas em evidências para os visitantes "
+            "de um painel de indicadores de saúde. Sempre lembre o usuário de que suas dicas são "
+            "informativas e não substituem uma consulta médica ou atendimento no SUS."
+        )
+
+        user_content = user_input.strip()
+        if context and context.strip():
+            user_content = f"Contexto do painel de saúde: {context.strip()}\nPergunta do visitante: {user_content}"
+
+        response = self._chat(system_prompt, user_content, max_new_tokens, 0.6, timeout_segundos)
+        return response, round(time.perf_counter() - inicio, 2)
+
+    def summarize_news(
+        self,
+        titulo: str,
+        texto: str,
+        max_new_tokens: int = 250,
+        max_chars: int = summarizer.MAX_CHARS_PADRAO,
+        timeout_segundos: float = 45.0,
+    ) -> tuple[str, float, int]:
+        """Resume um texto longo (map-reduce). Retorna (resumo, tempo_s, nº de blocos usados)."""
+        if not texto or not texto.strip():
+            raise ValueError("O texto a ser resumido está vazio.")
+
+        inicio = time.perf_counter()
+        blocos = summarizer.chunk_text(texto, max_chars=max_chars)
+        sistema = summarizer.PROMPT_SISTEMA_NOTICIA
+        temp = summarizer.TEMPERATURA_RESUMO
+
+        if len(blocos) == 1:
+            conteudo = blocos[0]
+        else:
+            parciais = [
+                self._chat(
+                    sistema,
+                    summarizer.PROMPT_BLOCO.format(titulo=titulo, texto=bloco),
+                    150,
+                    temp,
+                    timeout_segundos,
+                )
+                for bloco in blocos
+            ]
+            conteudo = "\n".join(f"- {p}" for p in parciais)
+
+        resumo = self._chat(
+            sistema,
+            summarizer.PROMPT_FINAL_NOTICIA.format(titulo=titulo, texto=conteudo),
+            max_new_tokens,
+            temp,
+            timeout_segundos,
+        )
+        return resumo, round(time.perf_counter() - inicio, 2), len(blocos)
+
+    def interpret_data(
+        self,
+        destaques: str,
+        max_new_tokens: int = 200,
+        timeout_segundos: float = 45.0,
+    ) -> tuple[str | None, float]:
+        """Gera um parágrafo interpretativo SEM números sobre destaques já calculados.
+
+        A saída é filtrada (`limpar_interpretacao`): frases com algarismos ou cortadas são descartadas.
+        Se nada sobrar, tenta uma segunda vez; persistindo, devolve ``None`` e a interface mostra
+        apenas os destaques determinísticos.
+        """
+        if not destaques or not destaques.strip():
+            raise ValueError("Os destaques a serem interpretados estão vazios.")
+
+        inicio = time.perf_counter()
+        prompt = summarizer.PROMPT_FINAL_DADOS.format(destaques=destaques.strip())
+        for temperatura in (summarizer.TEMPERATURA_RESUMO, 0.1):
+            texto = summarizer.limpar_interpretacao(
+                self._chat(summarizer.PROMPT_SISTEMA_DADOS, prompt, max_new_tokens, temperatura, timeout_segundos)
+            )
+            if texto:
+                return texto, round(time.perf_counter() - inicio, 2)
+        return None, round(time.perf_counter() - inicio, 2)
+
+
+    def answer_question(
+        self,
+        pergunta: str,
+        destaques: str,
+        max_new_tokens: int = 200,
+        timeout_segundos: float = 45.0,
+    ) -> tuple[str, float]:
+        """Responde a uma pergunta sobre o recorte atual, ancorada no resumo numérico."""
+        if not pergunta or not pergunta.strip():
+            raise ValueError("A pergunta está vazia.")
+        if not destaques or not destaques.strip():
+            raise ValueError("O resumo numérico do recorte está vazio.")
+
+        inicio = time.perf_counter()
+        texto = self._chat(
+            summarizer.PROMPT_SISTEMA_PERGUNTA,
+            summarizer.PROMPT_PERGUNTA.format(destaques=destaques.strip(), pergunta=pergunta.strip()),
+            max_new_tokens,
+            0.1,
+            timeout_segundos,
+        )
+        return texto, round(time.perf_counter() - inicio, 2)
 
 
 # Dicionário compartilhado entre api/main.py e api/route.py

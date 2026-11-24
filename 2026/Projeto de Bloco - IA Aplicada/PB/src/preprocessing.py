@@ -52,6 +52,21 @@ def drop_unnecessary_columns(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
+def _fill_with_mode(series: pd.Series) -> pd.Series:
+    """Preenche nulos com a moda da coluna (ou 'Não informado' se não houver)."""
+    mode = series.mode()
+    return series.fillna(mode.iloc[0] if not mode.empty else "Não informado")
+
+
+def remove_duplicates_and_outliers(df: pd.DataFrame) -> pd.DataFrame:
+    """Remove linhas duplicadas e idades implausíveis (fora de 0-110 anos)."""
+    df = df.drop_duplicates()
+    if "numero_idade_paciente" in df.columns:
+        idade = pd.to_numeric(df["numero_idade_paciente"], errors="coerce")
+        df = df[idade.between(0, 110)]
+    return df.reset_index(drop=True)
+
+
 def fill_missing_values(df: pd.DataFrame) -> pd.DataFrame:
     """
     Fill missing values in the DataFrame.
@@ -65,23 +80,17 @@ def fill_missing_values(df: pd.DataFrame) -> pd.DataFrame:
     df["nome_pais_paciente"] = df["nome_pais_paciente"].fillna(
         "BRASIL"
     )  # nome_pais_paciente
-    df["descricao_tipo_estabelecimento"] = df["descricao_tipo_estabelecimento"].fillna(
-        lambda x: x.mode()[0]
-    )  # descricao_tipo_estabelecimento
+    df["descricao_tipo_estabelecimento"] = _fill_with_mode(df["descricao_tipo_estabelecimento"])  # descricao_tipo_estabelecimento
     df["nome_uf_paciente"] = df["nome_uf_paciente"].fillna(
         df["nome_uf_estabelecimento"]
     )  # nome_uf_paciente
-    df["descricao_local_aplicacao"] = df["descricao_local_aplicacao"].fillna(
-        lambda x: x.mode()[0]
-    )  # descricao_local_aplicacao
-    df["descricao_vacina_fabricante"] = df["descricao_vacina_fabricante"].fillna(
-        lambda x: x.mode()[0]
-    )  # descricao_vacina_fabricante
+    df["descricao_local_aplicacao"] = _fill_with_mode(df["descricao_local_aplicacao"])  # descricao_local_aplicacao
+    df["descricao_vacina_fabricante"] = _fill_with_mode(df["descricao_vacina_fabricante"])  # descricao_vacina_fabricante
     df["nome_municipio_paciente"] = df["nome_municipio_paciente"].fillna(
         df["nome_municipio_estabelecimento"]
     )  # nome_municipio_paciente
     df["descricao_condicao_maternal"] = df["descricao_condicao_maternal"].fillna(
-        lambda x: x.mode()[0]
+        "Não informado"
     )  # descricao_condicao_maternal
     df["sigla_uf_paciente"] = df["sigla_uf_paciente"].fillna(
         df["sigla_uf_estabelecimento"]

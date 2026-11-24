@@ -63,6 +63,72 @@ class HealthTipResponse(BaseModel):
     tempo_geracao_segundos: float = Field(..., ge=0, description="Tempo gasto na inferência local em segundos.")
 
 
+class ResumoNoticiaRequest(BaseModel):
+    titulo: str = Field(default="", max_length=300, description="Título do texto (opcional).")
+    texto: str = Field(..., min_length=50, max_length=200000, description="Texto a ser resumido.")
+    max_tokens: int = Field(default=250, ge=50, le=600, description="Limite de tokens do resumo.")
+
+
+class ResumoDadosRequest(BaseModel):
+    data_inicio: date | None = Field(default=None, description="Data inicial do filtro (YYYY-MM-DD).")
+    data_fim: date | None = Field(default=None, description="Data final do filtro (YYYY-MM-DD).")
+    uf: str | None = Field(default=None, min_length=2, max_length=2, description="Sigla da UF (ex: RS, SP).")
+    municipio: str | None = Field(default=None, min_length=2, description="Nome do município.")
+    indicadores: str | None = Field(
+        default=None,
+        max_length=4000,
+        description="Indicadores já calculados (ex.: pelo dashboard, com filtros múltiplos). "
+                    "Se informado, a API não consulta a base.",
+    )
+    destaques: str | None = Field(
+        default=None,
+        max_length=4000,
+        description="Destaques determinísticos já calculados (ver `build_highlights`). "
+                    "Se informado junto com `indicadores`, a API não consulta a base.",
+    )
+    max_tokens: int = Field(default=200, ge=50, le=600, description="Limite de tokens da interpretação.")
+
+
+class PerguntaDadosRequest(BaseModel):
+    pergunta: str = Field(..., min_length=3, max_length=500, description="Pergunta sobre os dados do recorte.")
+    data_inicio: date | None = Field(default=None, description="Data inicial do filtro (YYYY-MM-DD).")
+    data_fim: date | None = Field(default=None, description="Data final do filtro (YYYY-MM-DD).")
+    uf: str | None = Field(default=None, min_length=2, max_length=2, description="Sigla da UF (ex: RS, SP).")
+    municipio: str | None = Field(default=None, min_length=2, description="Nome do município.")
+    destaques: str | None = Field(
+        default=None, max_length=4000, description="Resumo numérico já calculado; evita consultar a base."
+    )
+    max_tokens: int = Field(default=200, ge=50, le=600, description="Limite de tokens da resposta.")
+
+
+class PerguntaDadosResponse(BaseModel):
+    status: str = Field(default="sucesso")
+    resposta: str = Field(..., description="Resposta da LLM, ancorada no resumo numérico.")
+    modelo: str = Field(default="Qwen/Qwen2.5-3B-Instruct")
+    tempo_geracao_segundos: float = Field(..., ge=0)
+    contexto: str = Field(..., description="Resumo numérico enviado à LLM como contexto.")
+    numeros_nao_verificados: list[str] = Field(
+        default_factory=list,
+        description="Números da resposta ausentes do contexto (possível invenção).",
+    )
+
+
+class ResumoResponse(BaseModel):
+    """Resposta das rotas de sumarização."""
+    status: str = Field(default="sucesso")
+    resumo: str = Field(..., description="Resumo gerado pelo modelo local.")
+    modelo: str = Field(default="Qwen/Qwen2.5-3B-Instruct")
+    tempo_geracao_segundos: float = Field(..., ge=0)
+    blocos_processados: int | None = Field(default=None, description="Blocos de texto resumidos (notícias).")
+    indicadores: str | None = Field(default=None, description="Indicadores detalhados (dados), para transparência.")
+    destaques: str | None = Field(default=None, description="Destaques numéricos calculados em Python (sem IA).")
+    interpretacao: str | None = Field(
+        default=None,
+        description="Parágrafo gerado pela LLM, sem números; nulo se o modelo violar a regra.",
+    )
+    total_registros: int | None = Field(default=None, description="Registros considerados (dados).")
+
+
 class ErrorResponse(BaseModel):
     """Response Model padronizado para todas as respostas de erro da API."""
     status: str = Field(default="erro", description="Indicador de falha na requisição.")

@@ -1,0 +1,136 @@
+{
+ "noticias": [
+  {
+   "titulo": "Parque tecnológico hospitalar: equipamentos integrados como caminho para mais eficiência e segurança",
+   "tempo": 102.21,
+   "formato_ok": true,
+   "resumo": "**Tema:** Parque tecnológico hospitalar: equipamentos integrados como caminho para mais eficiência e segurança\n\n**Pontos principais:**\n1. Integração de equipamentos médicos em um parque tecnológico hospitalar facilita a manutenção, calibração e adequação regulatória.\n2. Integração permite padronização de processos, redução de retrabalho e melhor segurança do paciente.\n3. Equipamentos como ventiladores pulmonares hospitalares podem substituir ou auxiliar na respiração do paciente, controlando parâmetros importantes.\n\n**Relevância para a gestão em saúde:** \nA implementação de um parque tecnológico hospitalar integrado pode significativamente aumentar a eficiência operacional e a segurança dos pacientes, contribuindo para uma gestão mais eficaz e sustentável nos hospitais."
+  },
+  {
+   "titulo": "DEA em clínicas e hospitais: obrigatoriedade, critérios técnicos e como adquirir",
+   "tempo": 67.45,
+   "formato_ok": true,
+   "resumo": "**Tema:** O uso e obrigatoriedade do DEA (Desfibrilador Externo Automático) em clínicas e hospitais\n\n**Pontos principais:**\n1. O DEA é oferecido pela MedicalWay em três modalidades: compra, aluguel e comodato.\n2. A equipe de enfermagem é responsável pela utilização do DEA em clínicas conforme Resolução COFEN nº 704/2022.\n3. Clínicas de estética precisam ter DEA conforme Resolução CFM nº 2.153/2016, se realizarem procedimentos com anestesia local sem sedação.\n\n**Relevância para a gestão em saúde:** O DEA é fundamental para a gestão de emergências cardiorrespiratórias em clínicas e hospitais, garantindo a assistência adequada aos pacientes em caso de paradas cardiorrespiratórias, especialmente em situações de procedimentos estéticos."
+  },
+  {
+   "titulo": "Ventilador pulmonar hospitalar: o que avaliar antes de adquirir ou locar",
+   "tempo": 60.2,
+   "formato_ok": true,
+   "resumo": "**Tema:** Ventiladores pulmonares hospitalares: avaliação antes de adquirir ou locar\n\n**Pontos principais:**\n1. Diferenças entre ventiladores de UTI e de transporte.\n2. Requisitos de manutenção e recursos necessários.\n3. Decisão entre compra e locação baseada no perfil de uso.\n\n**Relevância para a gestão em saúde:** A escolha adequada de ventiladores pulmonares é crucial para garantir a qualidade do suporte respiratório, minimizando riscos aos pacientes e otimizando os recursos disponíveis na gestão de saúde."
+  },
+  {
+   "titulo": "Monitor multiparamétrico: a melhor configuração para cada tipo de leito",
+   "tempo": 65.84,
+   "formato_ok": true,
+   "resumo": "**Tema:** Monitor multiparamétrico BeneVision N Series da Mindray para diferentes tipos de leitos\n\n**Pontos principais:**\n1. Versatilidade para UTIs e pronto-socorro.\n2. Diferenças entre modelos N15 e N17.\n3. Requisitos legais e recomendações para UTIs.\n\n**Relevância para a gestão em saúde:** O monitor multiparamétrico BeneVision N Series é essencial para a gestão de UTIs, sendo obrigatório conforme a RDC-07 da Anvisa, e sua disponibilidade permite que hospitais adaptem suas infraestruturas de acordo com as necessidades específicas de cada tipo de leito."
+  },
+  {
+   "titulo": "BeneVision N17 vs N15: qual monitor Mindray é o ideal para a sua UTI?",
+   "tempo": 68.62,
+   "formato_ok": true,
+   "resumo": "**Tema:** Comparação entre os modelos BeneVision N17 e N15 da Mindray para UTIs\n\n**Pontos principais:**\n1. Os modelos N17 e N15 podem ser utilizados juntos em uma UTI, com N17 focado nos leitos críticos e N15 para outros leitos.\n2. A MedicalWay é distribuidora autorizada da Mindray no Sul do Brasil, oferecendo suporte técnico especializado.\n3. Os monitores estão disponíveis em diferentes formatos de compra, aluguel e comodato.\n\n**Relevância para a gestão em saúde:** \nA disponibilidade dos monitores BeneVision N17 e N15 em diferentes formatos de compra, aluguel e comodato permite que as clínicas trabalhem eficientemente com ambos sem necessidade de treinamento adicional, contribuindo para a gestão adequada dos recursos em saúde."
+  }
+ ],
+ "resumo_dados": [
+  {
+   "recorte": "Brasil",
+   "tempo": 23.64,
+   "interpretacao_sem_numeros": true,
+   "tem_interpretacao": true,
+   "interpretacao": "As três estados brasileiras com maior número de doses registradas foram São Paulo, Minas Gerais e Rio de Janeiro, indicando uma distribuição regional equilibrada. No entanto, a série temporária é irregular, com meses como março e junho registando apenas poucas doses.",
+   "destaques": "**Panorama:** 223.625 doses aplicadas (registros), entre 01/01/2025 e 11/06/2025, em 27 UF(s).\n\n**Destaques:**\n- Mês com mais doses: 05/2025 (114.867, 51,4% do total).\n- UFs com mais doses: SP 46.795 (20,9%); MG 26.388 (11,8%); RJ 15.294 (6,8%).\n- Fabricantes com mais doses registradas: Instituto Butantan 100.776 (45,1%); Fundacao Oswaldo Cruz 21.393 (9,6%); Serum Institute Of India Ltd. 13.424 (6,0%).\n- Faixa etária: mediana de 13 anos; 47,9% dos registros são de menores de 12 anos e 14,6% de pessoas com 60 anos ou mais.\n\n**Pontos de atenção:**\n- Os registros não trazem a população-alvo, então não é possível calcular cobertura vacinal; os números descrevem volume de doses registradas.\n- Meses com menos de 1% dos registros: 03/2025 (0), 04/2025 (6), 06/2025 (3). A série temporal é irregular."
+  },
+  {
+   "recorte": "SP",
+   "tempo": 18.71,
+   "interpretacao_sem_numeros": true,
+   "tem_interpretacao": true,
+   "interpretacao": "O panorama apresenta uma alta concentração de doses aplicadas no mês de maio, com São Paulo liderando a lista de municípios com mais doses registradas. No entanto, observa-se uma discrepância significativa na distribuição, com poucos registros nos meses de março e abril. Além disso, a série temporária é irregular, sugerindo que há períodos com baixos níveis de registro. Portanto, o gestor deve verificar essas lacunas para entender melhor a cobertura vacinal e identificar possíveis falhas na logística de vacinação.",
+   "destaques": "*Filtros: uf=SP*\n\n**Panorama:** 46.795 doses aplicadas (registros), entre 01/01/2025 e 31/05/2025, em 1 UF(s).\n\n**Destaques:**\n- Mês com mais doses: 05/2025 (24.710, 52,8% do total).\n- Municípios de SP com mais doses: Sao Paulo 12.484 (26,7%); Campinas 1.513 (3,2%); Guarulhos 1.240 (2,6%).\n- Fabricantes com mais doses registradas: Instituto Butantan 19.441 (41,5%); Fundacao Oswaldo Cruz 4.935 (10,5%); Serum Institute Of India Ltd. 3.385 (7,2%).\n- Faixa etária: mediana de 15 anos; 45,1% dos registros são de menores de 12 anos e 16,9% de pessoas com 60 anos ou mais.\n\n**Pontos de atenção:**\n- Os registros não trazem a população-alvo, então não é possível calcular cobertura vacinal; os números descrevem volume de doses registradas.\n- Meses com menos de 1% dos registros: 03/2025 (0), 04/2025 (0). A série temporal é irregular."
+  },
+  {
+   "recorte": "Fev/2025",
+   "tempo": 23.63,
+   "interpretacao_sem_numeros": true,
+   "tem_interpretacao": true,
+   "interpretacao": "As três maiores UFs em termos de doses aplicadas foram São Paulo, Minas Gerais e Rio de Janeiro, respectivamente. O Instituto Butantan e a Fundação Oswaldo Cruz foram os principais fabricantes envolvidos nesse volume de doses.",
+   "destaques": "*Filtros: data_inicio=2025-02-01, data_fim=2025-02-28*\n\n**Panorama:** 32.827 doses aplicadas (registros), entre 01/02/2025 e 28/02/2025, em 27 UF(s).\n\n**Destaques:**\n- Mês com mais doses: 02/2025 (32.827, 100,0% do total).\n- UFs com mais doses: SP 6.886 (21,0%); MG 2.995 (9,1%); RJ 2.007 (6,1%).\n- Fabricantes com mais doses registradas: Instituto Butantan 6.522 (19,9%); Fundacao Oswaldo Cruz 4.933 (15,0%); Serum Institute Of India Ltd. 3.110 (9,5%).\n- Faixa etária: mediana de 4 anos; 61,6% dos registros são de menores de 12 anos e 7,3% de pessoas com 60 anos ou mais.\n\n**Pontos de atenção:**\n- Os registros não trazem a população-alvo, então não é possível calcular cobertura vacinal; os números descrevem volume de doses registradas."
+  }
+ ],
+ "perguntas": [
+  {
+   "pergunta": "Qual UF concentra mais doses e qual a participação dela?",
+   "filtro": {},
+   "tempo": 4.67,
+   "numeros_nao_verificados": [],
+   "resposta": "SP concentra mais doses com 46.795, correspondendo a 20,9% do total."
+  },
+  {
+   "pergunta": "Qual o mês com mais doses?",
+   "filtro": {
+    "uf": "SP"
+   },
+   "tempo": 4.52,
+   "numeros_nao_verificados": [],
+   "resposta": "05/2025 (24.710, 52,8% do total)"
+  },
+  {
+   "pergunta": "O que se destaca no perfil etário?",
+   "filtro": {
+    "uf": "MG"
+   },
+   "tempo": 7.35,
+   "numeros_nao_verificados": [],
+   "resposta": "O perfil etário destaca-se pela mediana de 24 anos e por uma grande proporção de menores de 12 anos (40,4%) e pessoas de 60 anos ou mais (18,6%)."
+  },
+  {
+   "pergunta": "Qual foi a cobertura vacinal em Minas Gerais?",
+   "filtro": {},
+   "tempo": 8.74,
+   "numeros_nao_verificados": [],
+   "resposta": "Os dados do recorte atual não permitem responder a essa pergunta. Para calcular a cobertura vacinal, seria necessário saber a população-alvo específica para cada dose aplicada em Minas Gerais. Sugiro ajustar o recorte para incluir informações sobre a população-alvo naquele estado."
+  },
+  {
+   "pergunta": "Quantas doses de Pfizer foram aplicadas em Salvador?",
+   "filtro": {
+    "uf": "BA"
+   },
+   "tempo": 6.83,
+   "numeros_nao_verificados": [],
+   "resposta": "Os dados do recorte atual não permitem responder diretamente quantas doses da Pfizer foram aplicadas em Salvador. Sugiro ajustar o recorte para incluir informações sobre as vacinas específicas aplicadas em Salvador."
+  }
+ ],
+ "dicas": [
+  {
+   "pergunta": "Quais vacinas são importantes para idosos no inverno?",
+   "tempo": 22.13,
+   "tem_aviso": true,
+   "dica": "Durante o inverno, além das vacinas recomendadas para todos os grupos de idade, é importante que os idosos recebam a vacina contra a gripe (Influenza). A gripe pode ser particularmente perigosa para pessoas idosas devido à sua imunidade enfraquecida.\n\nAlém disso, recomenda-se que os idosos também recebam a vacina contra a pneumonia, especialmente se tiverem condições de saúde crônicas como problemas respiratórios, problemas cardíacos ou problemas de diabetes. \n\nÉ importante lembrar que essas vacinas são parte de um plano de vacinação geral e podem variar de acordo com a política de vacinação do seu país ou região. É sempre importante consultar um profissional de saúde para obter orientações específicas para a sua situação.\n\nAviso: estas informações são educativas e não substituem consulta médica ou atendimento no SUS."
+  },
+  {
+   "pergunta": "Por que é importante manter a caderneta de vacinação em dia?",
+   "tempo": 22.37,
+   "tem_aviso": true,
+   "dica": "Manter a caderneta de vacinação em dia é extremamente importante para garantir a proteção contra várias doenças potencialmente graves. As vacinas são essenciais porque elas ajudam o corpo a desenvolver anticorpos que combatem vírus e bactérias específicas. Quando a maioria da população está imunizada, isso ajuda a evitar epidemias e reduz o risco de transmissão para pessoas que não podem se vacinar devido a condições de saúde específicas.\n\nAlém disso, muitas vacinas têm um intervalo de vigência que varia de pessoa para pessoa. Assim, a manutenção da caderneta de vacinação em dia garante que você receba as doses necessárias para manter a proteção contra as doenças.\n\nAviso: estas informações são educativas e não substituem consulta médica ou atendimento no SUS."
+  },
+  {
+   "pergunta": "Estou com febre alta e manchas na pele. Qual é o meu diagnóstico?",
+   "tempo": 19.38,
+   "tem_aviso": true,
+   "dica": "Desculpe, mas eu não posso fazer um diagnóstico preciso sem uma avaliação médica. Manchas na pele associadas a febre alta podem indicar várias condições, como infecções urinárias, doenças do sistema imunológico, infecções virais ou bacterianas, entre outras.\n\nÉ crucial que você procure atendimento médico imediatamente, especialmente se estiver apresentando esses sintomas graves. O profissional de saúde poderá realizar exames necessários e precisos para determinar a causa da sua condição e fornecer o tratamento adequado.\n\nPor favor, ligue para um número de emergência ou vá ao pronto-socorro mais próximo se sentir muito mal. Lembre-se, sempre é importante consultar um profissional de saúde para obter assistência médica.\n\nAviso: estas informações são educativas e não substituem consulta médica ou atendimento no SUS."
+  }
+ ],
+ "resumo_final": {
+  "data": "2026-11-23",
+  "tempo_medio_s": {
+   "noticias": 72.9,
+   "resumo_dados": 22.0,
+   "perguntas": 6.4,
+   "dicas": 21.3
+  },
+  "noticias_formato_ok": 5,
+  "interpretacoes_validas": 3,
+  "perguntas_com_numero_nao_verificado": 0,
+  "dicas_com_aviso": 3
+ }
+}

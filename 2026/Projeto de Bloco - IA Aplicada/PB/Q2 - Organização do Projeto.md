@@ -59,5 +59,5 @@ O código-fonte, a estrutura do projeto e as instruções de execução serão d
 * Business Understanding: Compreensão do problema e definição do problema e objetivos
 * Data Acquisition e Understanding: Coleta de dados e compreensão dos mesmos
 * Modeling: Preparação e normalização dos dados
-* Deployment: Disponibilização do dashboad
+* Deployment: Disponibilização do dashboard
 * Customer Acceptance: A solução responde/atende ao problema?
